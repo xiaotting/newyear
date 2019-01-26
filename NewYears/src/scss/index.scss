@@ -1,0 +1,376 @@
+*{
+  box-sizing: border-box;
+}
+html {text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+body {font-family:'Microsoft Yehei',"Helvetica Neue",Helvetica,Tahoma,Arial,"Microsoft Yahei","Hiragino Sans GB","WenQuanYi Micro Hei",sans-serif;font-size:14px;line-height:1.6;color:#333;background:#fff;}
+body,button,code,dd,dl,dt,em,fieldset,form,h1,h2,h3,h4,h5,h6,iframe,img,input,label,li,ol,p,pre,sub,sup,td,textarea,th,ul {margin:0;padding:0}
+html,body{ width: 100%; height: 100%;}
+a:link {text-decoration:none}
+a:visited {text-decoration:none}
+a:hover {text-decoration:none}
+em,i {font-style:normal}
+ol,ul {list-style:none}
+img {-ms-interpolation-mode:bicubic}
+abbr,acronym,button,iframe,img,input {border:none}
+input:focus {outline:none}
+input[type=button]::-moz-focus-inner,input[type=file] > input[type=button]::-moz-focus-inner,input[type=reset]::-moz-focus-inner,input[type=submit]::-moz-focus-inner {padding:0;border:0}
+input,textarea {-webkit-appearance:none;font-family:"Microsoft YaHei","微软雅黑","Hiragino Sans GB",tahoma,arial,simhei}
+a,button,div,input,li,section,span {-webkit-tap-highlight-color:rgba(0,0,0,0);tap-highlight-color:rgba(0,0,0,0)}
+button,input,keygen,select,textarea {outline:none;text-rendering:optimizeLegibility !important;-webkit-font-smoothing:antialiased !important;-moz-osx-font-smoothing:grayscale !important}
+
+
+
+.newyears{
+  overflow: hidden;
+  height: 100%;
+  .container{
+    //position: absolute;
+    //top:0px;
+    //bottom: 0px;
+    overflow: auto;
+    //height: 100%;
+    .page{
+      //display: flex;
+      //flex-direction: column;
+      overflow: hidden;
+      //height: 100%;
+      background: url('../img/pic7.gif') 0 0 no-repeat,url("../img/bg.jpg") 0 0 no-repeat;
+      background-size: cover;
+      position: relative;
+      .header{
+        height: 32%;
+        position: relative;
+        .cloud{
+          position: absolute;
+          opacity: 0;
+          z-index: 2;
+          width: 100%;
+          height: 50%;
+          background: url("../img/pic2.png") no-repeat;
+          background-size: 100%;
+        }
+        .lantern{
+          width: 100%;
+          z-index: 1;
+          position: absolute;
+          top: 60px;
+          .commenlantern{
+            position: absolute;
+            height: 2500px;
+            width: 38%;
+            opacity: 0;
+          }
+          .leftlantern{
+            @extend .commenlantern;
+            left: 0px;
+            background: url("../img/pic3.png") no-repeat;
+            background-size:  100%;
+          }
+          .rightlantern{
+            @extend .commenlantern;
+            right: 0px;
+            background: url("../img/pic4.png") no-repeat;
+            background-size:  100%;
+          }
+        }
+      }
+      .bottom{
+        opacity: 0;
+        width: 100%;
+        height: 20%;
+        background: url("../img/pic6.png") no-repeat;
+        background-size: cover;
+        position: absolute;
+        bottom: 0;
+      }
+    }
+    .page1{
+      .concent{
+        width: 100%;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: -10%;
+        .contentbg{
+          opacity: 0;
+          width: 100%;
+          height: 90%;
+          background: url("../img/pic1.png") center 700px no-repeat,url("../img/pic5.png")  30px no-repeat;
+          background-size:55% , 100%;
+        }
+        .text{
+          opacity: 0;
+          flex: 1;
+          width: 100%;
+          text-align: center;
+          color: #fceea7;
+          font-size:64px;
+          p:first-child{
+            font-weight: bolder;
+          };
+        }
+      }
+    }
+    .page2,.page3{
+      .header{
+        .lantern{
+          .leftlantern{
+            @extend .commenlantern;
+            left: 0px;
+            width: 30%;
+            height: 2000px;
+            background: url("../img/pic3.png") no-repeat;
+            background-size:  100%;
+          }
+          .rightlantern{
+            @extend .commenlantern;
+            right: 0px;
+            width: 30%;
+            height: 2000px;
+            background: url("../img/pic4.png") no-repeat;
+            background-size:  100%;
+          }
+        }
+      }
+      .concent{
+        width: 100%;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: -30px;
+        .contentbg{
+          opacity: 0;
+          width: 100%;
+          height: 90%;
+          background:url("../img/pic5.png") 30px no-repeat;
+          background-size: 100%;
+          position: relative;
+          .page2text{
+            padding: 0 20px;
+            top: 14%;
+            position: absolute;
+            width: 60%;
+            height: 100%;
+            left: 20%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            p{
+              font-size: 70px;
+              color:#FCEEA7;
+              opacity: 0;
+              text-align: center;
+              &:first-child{
+                text-align: center;
+                width: 700px;
+                height: 180px;
+                border: 10px solid #FCEEA7;
+                border-radius: 350px;
+                line-height: 180px;
+                font-size: 100px;
+                letter-spacing: 20px;
+                font-weight: bolder;
+                margin-bottom: 40px;
+              }
+              &:last-child{
+                line-height: 120px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.animation{
+  .cloud{
+    animation: cloudenter 2s ease 1s;
+    animation-fill-mode: forwards;
+  }
+  .leftlantern{
+    animation: leftlanternEnter 2s ease 1s;
+    animation-fill-mode: forwards;
+  }
+  .rightlantern{
+    animation: rightlanternEnter 2s ease 1s;
+    animation-fill-mode: forwards;
+  }
+  .contentbg,.page2bg{
+    animation: bgEnter 2s ease 1s;
+    animation-fill-mode: forwards;
+  }
+  .text{
+    animation: textEnter 2s ease 3s;
+    animation-fill-mode: forwards;
+  }
+  .bottom{
+    animation: bottomEnter 2s ease 1s;
+    animation-fill-mode: forwards;
+  }
+  .firstTitle{
+    animation: firstTitleEnter 2s ease 3s;
+    animation-fill-mode: forwards;
+  }
+  .lastTitle{
+    animation: lastTitleEnter 2s ease 3s;
+    animation-fill-mode: forwards;
+  }
+}
+.meng{
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 3;
+  background: red;
+  opacity: 0.8;
+  transition: opacity ease;
+  //.fu{
+  //  width: 400px;
+  //  height: 400px;
+  //  background: url("../img/fudai.jpg") no-repeat;
+  //  background-size: 100%;
+  //}
+}
+.musicIcon{
+  z-index: 3;
+  position: fixed;
+  width: 180px;
+  height: 180px;
+  border-radius: 100%;
+  top: 60px;
+  right: 60px;
+  background: url("../img/musicIcon.png") no-repeat;
+  background-size: 100%;
+  animation: musicR 2s linear infinite;
+}
+.tip{
+  width: 100px;
+  height: 100px;
+  border: 16px solid #fff;
+  border-bottom: transparent;
+  border-right: transparent;
+  position: fixed;
+  bottom: 20px;
+  left:50%;
+  transform: rotate(45deg);
+  animation: tt 2s linear infinite;
+}
+@keyframes cloudenter {
+  from {
+    transform: translateY(-50%);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@keyframes rightlanternEnter {
+  from {
+    right:-600px;
+  }
+  to{
+    opacity: 1;
+    right:0;
+  }
+}
+@keyframes leftlanternEnter {
+  from {
+    left:-600px;
+  }
+  to{
+    opacity: 1;
+    left:0;
+  }
+}
+@keyframes bgEnter {
+  from {
+    transform: scale(0.1);
+    height: 0%;
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+    height: 90%;
+  }
+}
+@keyframes textEnter {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(360deg);
+  }
+}
+//@keyframes bgEnter {
+//  from {
+//    opacity: 0;
+//    .concent{
+//      width: 0%;
+//    }
+//    //transform: scale(0.2);
+//  }
+//  to {
+//    //transform: scale(1);
+//    .concent{
+//      width: 100%;
+//    }
+//  }
+//}
+@keyframes bottomEnter {
+  from {
+    transform: translateY(100%);
+  }
+  to{
+    opacity: 1;
+    bottom: 0;
+  }
+}
+@keyframes firstTitleEnter {
+  from{
+    transform: translateX(-100%);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+@keyframes lastTitleEnter {
+  from{
+    transform: translateY(100%);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@keyframes musicR {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+@keyframes tt {
+  0% {
+    opacity: 0.8;
+    bottom: 20px;
+  }
+  25%{
+    opacity: 1;
+    bottom: 60px;
+  }
+  50%{
+    opacity: 1;
+    bottom: 100px;
+  }
+  100%{
+    opacity: 0;
+    bottom: 140px;
+  }
+}

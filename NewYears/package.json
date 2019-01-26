@@ -1,0 +1,22 @@
+{
+  "name": "newyears",
+  "version": "0.0.1",
+  "dependencies": {
+    "gulp-px3rem": "^0.3.0",
+    "vconsole": "^3.2.2"
+  },
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-connect": "^5.7.0",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.11.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "zora",
+  "license": "ISC",
+  "description": ""
+}
