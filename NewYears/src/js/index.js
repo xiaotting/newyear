@@ -78,3 +78,6 @@ function resize() {
   $('.page').css({"height":pageHeight + 'px'})
   $('.container').css({"height":containerHeight + 'px'})
 }
+$(window).resize(function () {
+  resize()
+})
